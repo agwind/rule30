@@ -3,7 +3,7 @@ rule30
 
 rule30 - An program to experiment with running [Elementary Cellular Automata](http://mathworld.wolfram.com/ElementaryCellularAutomaton.html)
 
-This two simple [Moose](https://metacpan.org/pod/Moose) classes, a [Mojolicious::Lite](https://metacpan.org/pod/Mojolicious::Lite) app servering up our websocket for a [Vue.js](https://vuejs.org/) frontend.
+This is two simple [Moose](https://metacpan.org/pod/Moose) classes, and a [Mojolicious::Lite](https://metacpan.org/pod/Mojolicious::Lite) app servering up our websocket for a [Vue.js](https://vuejs.org/) frontend.
 
 ## To install:
 
