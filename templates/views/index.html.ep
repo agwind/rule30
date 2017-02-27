@@ -1,0 +1,40 @@
+  <body>
+    <button onclick="start()">Start</button><br/>
+    <button onclick="stop()">Stop</button><br/>
+	<div id="sandbox">
+   </div>
+
+    <script>
+      var ws = new WebSocket('<%= url_for('ws')->to_abs %>');
+		var life_history = new Array;
+ 
+      // Incoming messages
+      ws.onmessage = function (event) {
+			var life;
+			life = JSON.parse(event.data);
+			console.log("Life: ", life);
+			life_history.push(life.universe);
+			console.log("History: ", life_history);
+			render();
+      };
+ 
+		function render() {
+			var p = document.createElement("p");
+			var len;
+			len = life_history.length;
+			for (var i = 0; i < len ; i++) {
+				p.innerHTML = life_history[i].join();
+			}
+			document.getElementById("sandbox").appendChild(p);
+		}
+
+      function start() {
+			ws.send(JSON.stringify({ cmd: 'start' }));
+		}
+
+		function stop() {
+			ws.send(JSON.stringify({ cmd: 'stop' }));
+		}
+
+    </script>
+  </body>

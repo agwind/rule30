@@ -1,0 +1,6 @@
+vue/rule30/.DS_Store
+vue/rule30/node_modules/
+vue/rule30/npm-debug.log
+vue/rule30/test/unit/coverage
+vue/rule30/test/e2e/reports
+vue/rule30/selenium-debug.log
